@@ -1,0 +1,101 @@
+body, .offcanvas {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* MY LOGO */
+.media-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 10; /* Ensures it stays on top */
+}
+
+
+/* THE MOVIE/ TRAILER */
+.media-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    will-change: opacity, transform;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-container img, .media-container video {
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+}
+
+.media-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+
+
+/* THE MOVIE INFORMATION */
+.media-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.media-info .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.media-info .description {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.media-info .genres {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.media-info .genre, .btn-close {
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.media-info .rating {
+    font-size: 18px;
+}
+
+.content {
+    padding: 20px;
+    background: #fff;
+    color: #000;
+}
