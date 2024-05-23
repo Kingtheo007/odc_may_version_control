@@ -73,48 +73,60 @@
       color: #fff;
     }
 /* Custom CSS for the overlay text */
+/* Custom CSS for the overlay text */
 .carousel-caption {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: left;
-      left: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 
     .carousel-caption h1 {
-      font-size: 3rem;
-      font-weight: bold;
+        font-size: 3rem;
+        font-weight: bold;
     }
 
     .carousel-caption p {
-      font-size: 1.2rem;
-      max-width: 500px;
+        font-size: 1.2rem;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .carousel-caption .btn {
-      margin-top: 20px;
+        margin-top: 20px;
     }
 
     .carousel-indicators [data-bs-target] {
-      background-color: #fff;
+        background-color: #fff;
     }
 
     .destination {
-      position: absolute;
-      bottom: 10%;
-      left: 50px;
+        position: absolute;
+        bottom: 10%;
+        left: 50px;
     }
 
     .destination span {
-      display: block;
-      font-size: 1rem;
-      color: #fff;
-      text-transform: uppercase;
+        display: block;
+        font-size: 1rem;
+        color: #fff;
+        text-transform: uppercase;
     }
 
     .destination a {
-      color: #FF9F02;
-      text-decoration: none;
+        color: #FF9F02;
+        text-decoration: none;
+    }
+
+    .carousel-item {
+        max-height: 500px; /* Set your desired max height */
+    }
+
+    .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     </style>
 </head>
@@ -156,7 +168,7 @@
             <img src="https://cdn.pixabay.com/photo/2012/11/28/10/34/rocket-launch-67643_1280.jpg" class="d-block w-100" alt="space pic 1">
             <div class="carousel-caption">
               <h1>Human Exploration in Space</h1>
-              <p style="">Building on NASA’s 60 years of exploration experience and more than 20 years of continuous human presence on the International Space Station in low Earth orbit, we will extend humanity farther into space than ever before.</p>
+              <p>Building on NASA’s 60 years of exploration experience and more than 20 years of continuous human presence on the International Space Station in low Earth orbit, we will extend humanity farther into space than ever before.</p>
               <a class="btn btn-danger" href="#">Why We Go</a>
             </div>
             <div class="destination">
