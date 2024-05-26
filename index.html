@@ -160,21 +160,22 @@
             background-size: cover;
 
         }
-        .card-box {
-    padding: 20px;
-    border-radius: 3px;
-    margin-bottom: 30px;
-    background-color: #fff;
-    /* Darker and more pronounced shadow */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 6px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.card-box:hover {
-    /* Even more elevated effect on hover with darker shadows */
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.35), 0px 8px 10px rgba(0, 0, 0, 0.2);
-}
+        .card-box {
+            padding: 20px;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            /* Darker and more pronounced shadow */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 6px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-box:hover {
+            /* Even more elevated effect on hover with darker shadows */
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.35), 0px 8px 10px rgba(0, 0, 0, 0.2);
+        }
 
 
 
@@ -191,8 +192,9 @@
         }
 
         .social-links li a:hover {
-            color: #797979;
-            border: 2px solid #797979
+            color: #fff;
+            background-color: #0575E6;
+            border: 2px solid #021B79
         }
 
         .thumb-lg {
@@ -219,11 +221,21 @@
         .img-thumbnail {
             padding: .25rem;
             background-color: #fff;
-            border: 1px solid #dee2e6;
-            border-radius: .25rem;
+            border: 2px solid #000;
+            border-radius: 50%;
+            /* Makes the element circular */
             max-width: 100%;
             height: auto;
+            /* Adjust width and height to be equal to maintain the circle */
+            width: 100px;
+            /* Example fixed width */
+            height: 100px;
+            /* Example fixed height to maintain circle shape */
+            object-fit: cover;
+            /* Ensures the image fits well in the circular frame */
+
         }
+
 
         .text-pink {
             color: #ff679b !important;
@@ -248,11 +260,12 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="font-family: StarJedi; display: flex; align-items: center;">
-                <img src="assets/icon/rocket_icon.png" alt="Rocket Icon" style="height: 24px; width: auto; margin-right: 10px;">
+                <img src="assets/icon/rocket_icon.png" alt="Rocket Icon"
+                    style="height: 24px; width: auto; margin-right: 10px;">
                 SpaceTroops
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -265,7 +278,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: 500;">
+                            data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: 500;">
                             Team
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -282,7 +295,7 @@
             </div>
         </div>
     </nav>
-    
+
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -367,7 +380,7 @@
                                     class="rounded-circle img-thumbnail" alt="profile-image">
                             </div>
                             <div class>
-                                <h4 style="font-family: StarJedi;">Romeo Kambela</h4>
+                                <h4 style="font-family: StarJedi; margin-top: 10px;">Romeo Kambela</h4>
                                 <p class="text-muted">@Founder <span>| </span><span><a href="#"
                                             class="text-pink">websitename.com</a></span></p>
                             </div>
@@ -420,7 +433,7 @@
                                     class="rounded-circle img-thumbnail" alt="profile-image">
                             </div>
                             <div class>
-                                <h4 style="font-family: StarJedi;">Tshepo Ramoeng</h4>
+                                <h4 style="font-family: StarJedi; margin-top: 10px;">Tshepo Ramoeng</h4>
                                 <p class="text-muted">@Programmer <span>| </span><span><a href="#"
                                             class="text-pink">websitename.com</a></span></p>
                             </div>
@@ -471,7 +484,7 @@
                                     src="https://bootdey.com/img/Content/avatar/avatar4.png"
                                     class="rounded-circle img-thumbnail" alt="profile-image"></div>
                             <div class>
-                                <h4 style="font-family: StarJedi;">odireleng olifile Dikgole</h4>
+                                <h4 style="font-family: StarJedi; margin-top: 10px;">odireleng olifile Dikgole</h4>
                                 <p class="text-muted">@Webdesigner <span>| </span><span><a href="#"
                                             class="text-pink">websitename.com</a></span></p>
                             </div>
@@ -521,11 +534,10 @@
                 <div class="col-lg-4">
                     <div class="text-center card-box">
                         <div class="member-card pt-2 pb-2">
-                            <div class="thumb-lg member-thumb mx-auto"><img
-                                    src="assets/profile_pictures/astro_theo.jpg"
+                            <div class="thumb-lg member-thumb mx-auto"><img src="assets/profile_pictures/astro_theo.jpg"
                                     class="rounded-circle img-thumbnail" alt="profile-image"></div>
                             <div class>
-                                <h4 style="font-family: StarJedi;">Theo Motsisi</h4>
+                                <h4 style="font-family: StarJedi; margin-top: 10px;">Theo Motsisi</h4>
                                 <p class="text-muted">@Webdesigner <span>| </span><span><a href="#"
                                             class="text-pink">websitename.com</a></span></p>
                             </div>
@@ -538,7 +550,7 @@
                                             class="fa fa-twitter"></i></a></li>
                                 <li class="list-inline-item"><a title data-placement="top" data-toggle="tooltip"
                                         class="tooltips" href data-original-title="Skype"><i
-                                            class="fa fa-skype"></i></a></li>
+                                            class="fa fa-github"></i></a></li>
                             </ul>
                             <a href="#" class="animated-button1">
                                 <span></span>
@@ -546,7 +558,7 @@
                                 <span></span>
                                 <span></span>
                                 Message Now
-                              </a>
+                            </a>
                             <div class="mt-4">
                                 <div class="row">
                                     <div class="col-4">
