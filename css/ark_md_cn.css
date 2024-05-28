@@ -11,12 +11,20 @@ body, .offcanvas {
 .media-logo {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 40px;
     max-width: 50px;
     max-height: 50px;
     z-index: 10; /* Ensures it stays on top */
 }
 
+.media-hamburgermenu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 10; /* Ensures it stays on top */
+}
 
 /* THE MOVIE/ TRAILER */
 .media-container {

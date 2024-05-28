@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark | Home</title>
+    <link rel="icon" href="/odc_may_version_control/assets/icon/ark_page_icon.png" type="icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/odc_may_version_control/css/ark_md_cn.css">
+    <link rel="stylesheet" href="/odc_may_version_control/css/ark_mv_card.css">
+    <style>
+        .navbar-custom {
+            background-color: #141414;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #e50914;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-custom .nav-link {
+            color: #ffffff;
+            margin-right: 20px;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #e50914;
+        }
+
+        .navbar-custom .nav-item:last-child .nav-link {
+            margin-right: 0;
+        }
+
+        .navbar-custom .user-icon {
+            color: #ffffff;
+            font-size: 1.2em;
+        }
+
+        .navbar-custom .dropdown-menu {
+            background-color: #141414;
+            border: none;
+        }
+
+        .navbar-custom .dropdown-item {
+            color: #ffffff;
+        }
+
+        .navbar-custom .dropdown-item:hover {
+            background-color: #e50914;
+            color: #ffffff;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            border-radius: 20px;
+            padding: 5px 15px;
+            border: 1px solid #ffffff;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #e50914;
+        }
+    </style>
+    <style>
+        /* Offcanvas Styles */
+        .offcanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #141414;
+            color: #fff;
+            overflow-y: auto;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        .offcanvas.open {
+            transform: translateX(0);
+        }
+
+        .offcanvas-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .media-logo {
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .offcanvas-body {
+            padding: 10px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .profile-name {
+            font-size: 1.2em;
+        }
+
+        .switch-button {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: #e50914;
+            cursor: pointer;
+        }
+
+        .menu-section {
+            margin-bottom: 20px;
+        }
+
+        .dropdown-btn,
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            padding: 10px 0;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .dropdown-container p {
+            margin: 0;
+        }
+
+        .genres-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .genres-list li {
+            padding: 5px 0;
+        }
+    </style>
+    <style>
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .footer .col-md-4 {
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .footer .social-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .footer .social-icon:hover {
+            color: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- media container: "Plays a video when you move a mouse over it." -->
+    <!-- update the fade animation -->
+    <div class="media-container">
+        <!-- page logo and menu button -->
+        <a class="btn" data-bs-toggle="offcanvas" href="#header" role="button" aria-controls="header">
+            <img src="/odc_may_version_control/assets/icon/bars-solid.svg" class="media-hamburgermenu media-logo"
+                style="position: absolute; top: 30px; left: 20px; max-width: 25px; max-height: 25px;">
+        </a>
+        <img src="/odc_may_version_control/assets/img/ark_page_logo_tr.png" alt="logo" class="media-logo"
+            style="position: absolute; top: 20px; left: 50px; max-width: 50px; max-height: 50px;">
+        <img src="/odc_may_version_control/assets/img/ark_page_bp.jpg" alt="Image" class="media-image">
+        <video src="/odc_may_version_control/assets/videos/ark_page_bp.mp4" class="media-video"></video>
+        <div class="media-info">
+            <h2 class="title">Black Panther: Wakanda Forever</h2>
+            <p class="description">The people of Wakanda fight to protect their home from intervening world powers as
+                they mourn the death of King T'Challa. </p>
+            <div class="genres">
+                <span class="genre">Action</span>
+                <span class="genre">Drama</span>
+                <span class="genre">Advanture</span>
+            </div>
+            <div class="rating">Rated: 4.7/5</div>
+        </div>
+    </div>
+    <!-- end of media container -->
+
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">ROMEO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Latest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My List</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle user-icon" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Account</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline search-bar ml-3">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+    <!-- end header -->
+
+    <!-- settings menu 2: 1) As an offcanvas. 2) Controlled by my logo-->
+    <!-- fix it -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="header" aria-labelledby="headerLabel">
+        <div class="offcanvas-header">
+            <h2 style="color: #fffefe;">MENU</h2>
+            <button type="button" class="btn-close" style="background-color: #ff0000;" data-bs-dismiss="offcanvas" aria-label="Close"
+                onclick="closeOffcanvas()"></button>
+        </div>
+        <hr>
+        <div class="offcanvas-body">
+            <div class="profile-header">
+                <img src="/odc_may_version_control/assets/profile_pictures/romeo_kambela.jpeg" alt="Profile" class="profile-pic">
+                <span class="profile-name">Romeo</span>
+                <a href="/odc_may_version_control/pages/Ark.html"><img src="/odc_may_version_control/assets/icon/repeat-solid.svg" style="width: 20px; height: 100%;"></a>
+            </div>
+            <hr>
+            <div class="menu-section">
+                <button class="dropdown-btn" onclick="toggleDropdown()"><h3>Notifications &#8595</h3></button>
+                <div id="notificationsDropdown" class="dropdown-container">
+                    <p>No new notifications</p>
+                </div>
+            </div>
+            <hr>
+            <div class="menu-section">
+                <button class="menu-btn"><h3>My Downloads</h3></button>
+            </div>
+            <hr>
+            <div class="menu-section">
+                <h3>Genres</h3>
+                <ul class="genres-list">
+                    <li>Action</li>
+                    <li>Comedy</li>
+                    <li>Drama</li>
+                    <li>Horror</li>
+                    <li>Sci-Fi</li>
+                    <li>Documentary</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- custom movie cards: I categorised them by their genre-->
+
+    <div class="category">
+        <div class="category-divider">
+            <span class="category-name">Action</span>
+            <hr>
+        </div>
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_bp_cv.jpg" alt="BLACK PANTHER">
+                <div class="movie-title">BLACK PANTHER</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_tlous_cv.png" alt="THE LAST OF US">
+                <div class="movie-title">THE LAST OF US</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_sm_cv.jpg" alt="SPIDER-MAN">
+                <div class="movie-title">SPIDER-MAN</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_jw_cv.png" alt="JOHN WICK">
+                <div class="movie-title">JOHN WICK</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_us_cv.png" alt="US">
+                <div class="movie-title">US</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <div class="category-divider">
+            <span class="category-name">Comedy</span>
+            <hr>
+        </div>
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_ci_cmd_cv.jpg" alt="CENTRAL INTELLIGENCE">
+                <div class="movie-title">CENTRAL INTELLIGENCE</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_dm3_cmd_cv.jpg" alt="DESPICABLE ME">
+                <div class="movie-title">DESPICABLE ME</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_fg_cmd_cv.jpg" alt="FREE GUY">
+                <div class="movie-title">FREE GUY</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_gh_cmd_cv.jpg" alt="GET HARD">
+                <div class="movie-title">GET HARD</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_je_cmd_cv.jpg" alt="JOHNNY ENGLISH">
+                <div class="movie-title">JOHNNY ENGLISH</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <div class="category-divider">
+            <span class="category-name">ANIME</span>
+            <hr>
+        </div>
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_aot_anm_cv.jpg" alt="ATTACK ON TITAN">
+                <div class="movie-title">ATTACK ON TITAN</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_ds_anm_cv.jpg" alt="DEMON SLAYER">
+                <div class="movie-title">DEMON SLAYER</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_jjk_anm_cv.jpg" alt="JUJUTSU KAISEN">
+                <div class="movie-title">JUJUTSU KAISEN</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_mtjr_anm_cv.jpg"
+                    alt="MUSHOKU TENSEI: JOBLESS RE-INCARNATION">
+                <div class="movie-title">MUSHOKU TENSEI</div>
+            </div>
+            <div class="movie-card">
+                <img src="/odc_may_version_control/assets/img/ark_page_yn_anm_cv.jpg" alt="YOUR NAME">
+                <div class="movie-title">YOUR NAME</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end custom movie cards -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Romeo Kambela Media.Inc</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fab fa-facebook-f social-icon"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter social-icon"></i>Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in social-icon"></i>LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-instagram social-icon"></i>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="text-muted">© Romeo Kambela. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="/odc_may_version_control/js/ark.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script>
+        // notifications script
+        function toggleDropdown() {
+            const dropdown = document.getElementById('notificationsDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
